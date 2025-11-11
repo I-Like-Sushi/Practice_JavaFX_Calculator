@@ -194,29 +194,29 @@ public class Controller {
             secondNumber = Double.parseDouble(screen.getText());
             finalNumber = number + secondNumber;
             screen.setText(String.valueOf(finalNumber));
-            arithmeticOperator.setText(null);
+            arithmeticOperator.setText("");
             previousNumber.clear();
-        } else if (arithmeticOperator.getText().equals("-")) {
+        }
+        if (arithmeticOperator.getText().equals("-")) {
             secondNumber = Double.parseDouble(screen.getText());
             finalNumber = number - secondNumber;
             screen.setText(String.valueOf(finalNumber));
             arithmeticOperator.setText("");
             previousNumber.clear();
-        } else if (arithmeticOperator.getText().equals("x")) {
+        }
+        if (arithmeticOperator.getText().equals("x")) {
             secondNumber = Double.parseDouble(screen.getText());
             finalNumber = number * secondNumber;
             screen.setText(String.valueOf(finalNumber));
             arithmeticOperator.setText("");
             previousNumber.clear();
-        } else if (arithmeticOperator.getText().equals("/")) {
+        }
+        if (arithmeticOperator.getText().equals("/")) {
             secondNumber = Double.parseDouble(screen.getText());
             finalNumber = number / secondNumber;
             screen.setText(String.valueOf(finalNumber));
             arithmeticOperator.setText("");
             previousNumber.clear();
-        }
-        else {
-            System.out.println("Error inside handleEnter().");
         }
     }
 
